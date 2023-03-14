@@ -69,7 +69,7 @@ h1 {
 }
 
 .navbar-light .navbar-nav .nav-link {
-  font-size: 1.6em;
+  font-size: 1.8em;
   margin: 0 1rem;
   color: var(--grayText);
   text-transform: uppercase;
@@ -150,4 +150,101 @@ h1 {
 
 .section-booking a img {
   width: 100%;
+}
+
+/* SERVICES PAGE */
+.body-services {
+  background: url("/assets/img/fondo-servicios.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+  /* height: 100%; */
+}
+.header-services {
+  background: none;
+}
+
+.body-services h1 {
+  padding: 5rem 0 0 0;
+  border-width: 7px;
+  border-style: solid;
+  border-image: radial-gradient(circle, #fff 30%, rgba(0, 0, 0, 0)) 1 0;
+  border-top: none;
+}
+
+.service {
+  border-top-right-radius: 1rem;
+  border-top-left-radius: 1rem;
+  padding: 0;
+  width: 20%;
+  font-family: "Cond";
+  /* overflow: hidden; */
+}
+
+.service-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-top-right-radius: 3rem;
+  border-top-left-radius: 3rem;
+}
+
+.service-info {
+  background: #ffffff95;
+  border-bottom-right-radius: 3rem;
+  border-bottom-left-radius: 3rem;
+  padding: 1rem 1.5rem;
+}
+
+.service h2 {
+  font-family: "BoldItalic";
+  font-size: 2.5em;
+  text-transform: uppercase;
+}
+
+.service-title-container {
+  display: flex;
+  align-items: center;
+}
+
+.service-title-container img {
+  width: 4%;
+}
+
+.service h3 {
+  font-family: "Bold";
+  font-size: 1.4em;
+  margin: 0.5rem 0;
+  padding-left: 0.5rem;
+  text-transform: uppercase;
+}
+
+.service ul {
+  margin: 0;
+  list-style-type: none;
+  padding-left: 1rem;
+}
+.service ul li {
+  line-height: 1.7rem;
+}
+.service ul > li {
+  text-indent: -5px;
+}
+.service ul > li:before {
+  content: "-";
+  text-indent: -5px;
+  padding-right: 0.5rem;
+}
+
+.service li,
+.service p {
+  font-size: 1.3em;
+}
+.btn-more {
+  cursor: pointer;
+  position: absolute;
+
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
 }
