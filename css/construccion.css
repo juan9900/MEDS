@@ -1,0 +1,343 @@
+@font-face {
+  font-family: "AkzidenzBoldItalic0";
+  src: url(/assets/fonts/AkzidenzGrotesk-BoldCondItalic_0.otf);
+}
+
+@font-face {
+  font-family: "AkzidenzBold";
+  src: url("/assets/fonts/AkzidenzGrotesk-BoldCond_0.otf");
+}
+:root {
+  --darkGray: #474747;
+  --darkWhite: #ececec;
+  --MainTitle: #eeeeee;
+}
+img {
+  max-width: 100%;
+}
+
+body {
+  height: 100vh;
+  background: url("/assets/img/Fondo-MEDS.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+html,
+body {
+  width: 100% !important;
+  overflow-x: hidden !important;
+}
+
+main {
+  width: 65%;
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+h1 {
+  color: var(--darkWhite);
+  font-size: 4em;
+  text-align: center;
+  font-family: "AkzidenzBold";
+  margin-top: 0.3em;
+  text-shadow: 2px 2px rgb(29, 29, 29);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.site-logo {
+  width: 44%;
+  margin-top: 1rem;
+}
+
+.qr-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.qr-container img {
+  width: 30%;
+  padding-right: 1rem;
+}
+
+.qr-container p {
+  color: var(--darkWhite);
+  text-align: center;
+  font-family: "AkzidenzBold";
+  font-family: "AkzidenzBold";
+  text-shadow: 2px 2px rgb(29, 29, 29);
+  font-size: 3em;
+}
+
+.title {
+  font-family: "AkzidenzBold";
+  color: var(--darkGray);
+  padding: 0.2em 0.5em;
+  font-size: 2em;
+  height: fit-content;
+  width: fit-content;
+  background-color: #ffffffcb; /* set your desired background color */
+  transform: skewX(-18deg);
+  border-radius: 0.3em;
+  background: rgb(63, 94, 251);
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.585) 10%,
+    rgba(255, 255, 255, 1) 100%
+  );
+}
+
+.address {
+  background: rgb(63, 94, 251);
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.585) 10%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  font-family: "AkzidenzBold";
+  padding: 0.3em 0.3em;
+  font-size: 1.4em;
+  color: var(--darkGray);
+  text-align: center;
+  border-radius: 0.3em;
+  margin: 2.3rem auto 0 auto;
+  width: 75%;
+  position: relative;
+}
+
+.address img {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -80%);
+  width: 7%;
+}
+
+.socials-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 1.5rem;
+  justify-content: flex-start;
+}
+
+.social {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 0.5rem 0.5rem;
+}
+
+.social.half {
+  width: 45%;
+}
+
+.social img {
+  width: 8%;
+  object-fit: contain;
+}
+.social-email {
+  justify-content: flex-end;
+}
+.social-instagram {
+  justify-content: flex-start;
+}
+.social-whatsapp {
+  flex-grow: 1;
+  flex-wrap: wrap;
+}
+
+.social-whatsapp img {
+  width: 4%;
+}
+.social a:link,
+.social a:visited,
+.social p,
+.separator {
+  color: var(--MainTitle);
+  text-decoration: none;
+  font-family: "AkzidenzBold";
+  font-size: 1.3em;
+  padding: 0 0.1em;
+  margin: 0.3rem 0;
+  text-shadow: 2px 2px rgb(61, 61, 61);
+}
+
+@media screen and (max-width: 820px) {
+  body {
+    background-position: 85%, 0;
+    height: auto;
+  }
+  main {
+    width: 100%;
+    padding: 5% 0;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+  }
+  .site-logo {
+    width: 80%;
+    margin: 1rem auto;
+  }
+  .title {
+    width: 70%;
+    text-align: center;
+    font-size: 1.6em;
+    margin: 0 auto;
+  }
+  h1 {
+    font-size: 2.2em;
+    margin: 1.5rem auto 0 auto;
+    width: 90%;
+  }
+
+  .qr-container {
+    flex-direction: column;
+  }
+
+  .qr-container p {
+    font-size: 3em;
+  }
+  .qr-container img {
+    width: 60%;
+    padding-right: 0;
+  }
+  .address {
+    margin-top: 5rem;
+    font-size: 1.5em;
+  }
+  .address img {
+    width: 20%;
+  }
+  .socials-container {
+    flex-direction: column;
+  }
+  .social.half,
+  .social {
+    width: 100%;
+  }
+  .social-email,
+  .social-instagram,
+  .social-whatsapp {
+    justify-content: center;
+  }
+  .social img {
+    margin-right: 0.3em;
+  }
+  .social-whatsapp {
+    flex-direction: column;
+  }
+  .separator {
+    display: none;
+  }
+  .social-whatsapp a {
+    margin: 0.5rem 0;
+  }
+  .social-whatsapp img {
+    width: 10%;
+    margin-bottom: 0.2rem;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  .address {
+    width: fit-content;
+  }
+
+  .address {
+    font-size: 2em;
+  }
+  .address img {
+    width: 5%;
+  }
+
+  main {
+    justify-content: space-between;
+    height: 95%;
+  }
+  .qr-container p {
+    font-size: 4em;
+  }
+
+  .qr-container img {
+    width: 40%;
+  }
+
+  .social a:link,
+  .social a:visited,
+  .social p,
+  .separator {
+    font-size: 2em;
+  }
+}
+
+@media screen and (min-width: 2500px) {
+  .address {
+    font-size: 2.9em;
+    width: 80%;
+    margin: 0 auto;
+  }
+  .address img {
+    width: 10%;
+  }
+
+  main {
+    justify-content: space-between;
+    height: 95%;
+  }
+
+  .title {
+    font-size: 4em;
+  }
+
+  h1 {
+    font-size: 8em;
+  }
+  .qr-container p {
+    font-size: 6em;
+    width: 100%;
+  }
+
+  .qr-container img {
+    width: 50%;
+  }
+
+  .social a:link,
+  .social a:visited,
+  .social p,
+  .separator {
+    font-size: 3em;
+  }
+}
+
+@media screen and (min-width: 3000px) {
+  .title {
+    font-size: 5em;
+  }
+
+  .address {
+    font-size: 4.4em;
+  }
+
+  .address img {
+    width: 7%;
+  }
+  .social a:link,
+  .social a:visited,
+  .social p,
+  .separator {
+    font-size: 3.5em;
+  }
+}
