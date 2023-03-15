@@ -202,6 +202,18 @@ h1 {
   text-transform: uppercase;
 }
 
+.service .service-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  padding: 1rem;
+  font-size: 3em;
+  color: var(--offWhite);
+  font-family: "Cond";
+  text-shadow: 2px 2px 5px rgb(38, 38, 38);
+}
+
 .service-title-container {
   display: flex;
   align-items: center;
@@ -247,4 +259,141 @@ h1 {
   bottom: 0;
   left: 50%;
   transform: translate(-50%, 50%);
+}
+
+/* CENTER PAGE */
+/* HEADER */
+.header-center {
+  background: url("/assets/img/fondo-centro-1.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.wrapper {
+  z-index: 0;
+  height: 100%;
+  position: relative;
+}
+.custom-slider-container {
+  /* background: green; */
+}
+.slider-element {
+  position: absolute;
+  transition: left 0.7s, z-index 0.3s, transform 0.7s, filter 0.5s;
+  box-shadow: 1px 2px 5px rgb(63, 63, 63);
+  width: 30%;
+}
+
+.slider-element.active {
+  left: 50%;
+  z-index: 4;
+  transform: translateX(-50%);
+}
+
+.slider-element.next {
+  left: 21%;
+  z-index: 3;
+  transform: scale(0.8);
+  filter: grayscale(1);
+}
+
+.slider-element.prev {
+  left: 50%;
+
+  z-index: 3;
+  transform: scale(0.8);
+  filter: grayscale(1);
+}
+
+.slider-control {
+  background: none;
+  border: none;
+  width: 5%;
+  outline: none;
+}
+
+button:focus {
+  border: 0;
+  outline: none !important;
+}
+.slider-prev {
+  position: absolute;
+  left: 15%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.slider-next {
+  right: 15%;
+
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+}
+.slider-indicators {
+  position: relative;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.slider-indicator {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 100%;
+  border: none;
+  background: var(--title);
+  transition: background 0.2s ease-in;
+  margin: 0 0.2rem;
+}
+
+.slider-indicator.active {
+  background: var(--grayText);
+}
+
+.center-description {
+  font-family: "Cond";
+  font-size: 1.6em;
+  line-height: 1.8rem;
+}
+
+.center-description span {
+  font-family: "Bold";
+}
+
+.gallery-container {
+  background: url("/assets/img/fondo-centro-2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 5rem 5rem;
+  font-family: "Cond";
+  color: var(--offWhite);
+  font-size: 1.4em;
+  text-align: justify;
+}
+.gallery-container h1 {
+  padding: 0 0 2rem 0;
+  font-size: 3.5em;
+  background: var(--offWhite);
+  display: block;
+  width: fit-content;
+  padding: 0.8rem 1.5rem;
+  color: var(--secondary);
+  text-shadow: none;
+  transform: skewX(-18deg);
+  border-radius: 0.3em;
+  background: rgb(63, 94, 251);
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.585) 10%,
+    rgba(255, 255, 255, 0.9) 100%
+  );
+  font-family: "Bold";
+  margin-bottom: 2rem;
+}
+
+.miniature-container img {
+  margin-top: 1rem;
+  width: 10%;
+  flex: 1;
 }
