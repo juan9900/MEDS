@@ -70,21 +70,21 @@ sliderIndicators.eq(1).addClass('active');
     
 
     const images = [
-        {src: '/assets/img/galeria-meds-md/galeria-meds-md-1.jpg'},
-        {src: '/assets/img/galeria-meds-md/galeria-meds-md-2.jpg'},
-        {src: '/assets/img/galeria-meds-md/galeria-meds-md-3.jpg'},
-        {src: '/assets/img/galeria-meds-md/galeria-meds-md-4.jpg'},
-        {src: '/assets/img/galeria-meds-md/galeria-meds-md-5.jpg'},
-        {src: '/assets/img/galeria-meds-md/galeria-meds-md-6.jpg'},
-        {src: '/assets/img/galeria-meds-md/galeria-meds-md-7.jpg'},
-        {src: '/assets/img/galeria-meds-md/galeria-meds-md-8.jpg'},
-        {src: '/assets/img/galeria-meds-md/galeria-meds-md-9.jpg'},
-        {src: '/assets/img/galeria-meds-md/galeria-meds-md-10.jpg'},
-        {src: '/assets/img/galeria-meds-md/galeria-meds-md-11.jpg'},
-        {src: '/assets/img/galeria-meds-md/galeria-meds-md-12.jpg'},
-        {src: '/assets/img/galeria-meds-md/galeria-meds-md-13.jpg'},
-        {src: '/assets/img/galeria-meds-md/galeria-meds-md-14.jpg'},
-        {src: '/assets/img/galeria-meds-md/galeria-meds-md-15.jpg'},
+        {src: '/assets/img/galeria-meds-md/galeria-meds-md-1.webp'},
+        {src: '/assets/img/galeria-meds-md/galeria-meds-md-2.webp'},
+        {src: '/assets/img/galeria-meds-md/galeria-meds-md-3.webp'},
+        {src: '/assets/img/galeria-meds-md/galeria-meds-md-4.webp'},
+        {src: '/assets/img/galeria-meds-md/galeria-meds-md-5.webp'},
+        {src: '/assets/img/galeria-meds-md/galeria-meds-md-6.webp'},
+        {src: '/assets/img/galeria-meds-md/galeria-meds-md-7.webp'},
+        {src: '/assets/img/galeria-meds-md/galeria-meds-md-8.webp'},
+        {src: '/assets/img/galeria-meds-md/galeria-meds-md-9.webp'},
+        {src: '/assets/img/galeria-meds-md/galeria-meds-md-10.webp'},
+        {src: '/assets/img/galeria-meds-md/galeria-meds-md-11.webp'},
+        {src: '/assets/img/galeria-meds-md/galeria-meds-md-12.webp'},
+        {src: '/assets/img/galeria-meds-md/galeria-meds-md-13.webp'},
+        {src: '/assets/img/galeria-meds-md/galeria-meds-md-14.webp'},
+        {src: '/assets/img/galeria-meds-md/galeria-meds-md-15.webp'},
 
       ];
       
