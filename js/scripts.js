@@ -69,8 +69,33 @@ sliderIndicators.eq(1).addClass('active');
     $('#prev').on('click',slidePrev);
     
 
-    var queue = new createjs.LoadQueue(true);
-    queue.loadManifest(["/assets/img/galeria-meds-md/galeria-meds-md-1.jpg","/assets/img/galeria-meds-md/galeria-meds-md-2.jpg","/assets/img/galeria-meds-md/galeria-meds-md-3.jpg","/assets/img/galeria-meds-md/galeria-meds-md-4.jpg","/assets/img/galeria-meds-md/galeria-meds-md-5.jpg","/assets/img/galeria-meds-md/galeria-meds-md-6.jpg","/assets/img/galeria-meds-md/galeria-meds-md-7.jpg","/assets/img/galeria-meds-md/galeria-meds-md-8.jpg","/assets/img/galeria-meds-md/galeria-meds-md-9.jpg","/assets/img/galeria-meds-md/galeria-meds-md-10.jpg","/assets/img/galeria-meds-md/galeria-meds-md-11.jpg","/assets/img/galeria-meds-md/galeria-meds-md-12.jpg","/assets/img/galeria-meds-md/galeria-meds-md-13.jpg","/assets/img/galeria-meds-md/galeria-meds-md-14.jpg","/assets/img/galeria-meds-md/galeria-meds-md-15.jpg"]);
+    const images = [
+        {src: '/assets/img/galeria-meds-md/galeria-meds-md-1.jpg'},
+        {src: '/assets/img/galeria-meds-md/galeria-meds-md-2.jpg'},
+        {src: '/assets/img/galeria-meds-md/galeria-meds-md-3.jpg'},
+        {src: '/assets/img/galeria-meds-md/galeria-meds-md-4.jpg'},
+        {src: '/assets/img/galeria-meds-md/galeria-meds-md-5.jpg'},
+        {src: '/assets/img/galeria-meds-md/galeria-meds-md-6.jpg'},
+        {src: '/assets/img/galeria-meds-md/galeria-meds-md-7.jpg'},
+        {src: '/assets/img/galeria-meds-md/galeria-meds-md-8.jpg'},
+        {src: '/assets/img/galeria-meds-md/galeria-meds-md-9.jpg'},
+        {src: '/assets/img/galeria-meds-md/galeria-meds-md-10.jpg'},
+        {src: '/assets/img/galeria-meds-md/galeria-meds-md-11.jpg'},
+        {src: '/assets/img/galeria-meds-md/galeria-meds-md-12.jpg'},
+        {src: '/assets/img/galeria-meds-md/galeria-meds-md-13.jpg'},
+        {src: '/assets/img/galeria-meds-md/galeria-meds-md-14.jpg'},
+        {src: '/assets/img/galeria-meds-md/galeria-meds-md-15.jpg'},
+
+      ];
+      
+      const loader = new createjs.LoadQueue();
+      loader.loadManifest(images);
+      loader.on("complete", handleComplete);
+      
+      function handleComplete() {
+        console.log("Images loaded.");
+        // You can now use the images in your application
+      }
   //Select the image to visualize in the gallery
   const miniatures = $('.gallery-miniature');
   $(miniatures).each(function(){
@@ -81,11 +106,11 @@ sliderIndicators.eq(1).addClass('active');
         console.log("🚀 ~ file: scripts.js:80 ~ $ ~ originalPath:", originalPath)
         const replacedPath = originalPath.replace(/sm/g,'md');
         console.log("🚀 ~ file: scripts.js:82 ~ $ ~ replacedPath:", replacedPath)
-        $('.gallery-principal-img').fadeOut(function(){
-            $('.gallery-principal-img').attr('src',replacedPath);
-        });
-        $('.gallery-principal-img').delay(300).fadeIn();
-        
+        // $('.gallery-principal-img').fadeOut(function(){
+        //     $('.gallery-principal-img').attr('src',replacedPath);
+        // });
+        // $('.gallery-principal-img').delay(300).fadeIn();
+        $('.gallery-principal-img')
     })
   })
 

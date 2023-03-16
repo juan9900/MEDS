@@ -392,6 +392,15 @@ button:focus {
   margin-bottom: 2rem;
 }
 
+.gallery-principal-img {
+  opacity: 1;
+  transition: all 3s;
+}
+
+.gallery-principal-img.transition {
+  opacity: 0;
+}
+
 .miniature-container img {
   margin: 1rem 0.5rem 0 0.5rem;
   width: 11%;
