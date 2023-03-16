@@ -33,6 +33,7 @@ html {
 
 img {
   max-width: 100%;
+  height: auto;
 }
 
 .row {
@@ -273,9 +274,6 @@ h1 {
   z-index: 0;
   height: 23rem;
   position: relative;
-}
-.custom-slider-container {
-  /* background: green; */
 }
 .slider-element {
   position: absolute;
