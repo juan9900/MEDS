@@ -402,3 +402,12 @@ button:focus {
   filter: grayscale(0);
   box-shadow: 0 0 10px;
 }
+
+.gallery-principal-img {
+  opacity: 1;
+  transition: all 0.5s;
+}
+
+.gallery-principal-img.transition {
+  opacity: 0;
+}

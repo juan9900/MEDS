@@ -106,10 +106,14 @@ sliderIndicators.eq(1).addClass('active');
         console.log("🚀 ~ file: scripts.js:80 ~ $ ~ originalPath:", originalPath)
         const replacedPath = originalPath.replace(/sm/g,'md');
         console.log("🚀 ~ file: scripts.js:82 ~ $ ~ replacedPath:", replacedPath)
-        $('.gallery-principal-img').fadeOut(function(){
-            $('.gallery-principal-img').attr('src',replacedPath);
-        });
-        $('.gallery-principal-img').delay(300).fadeIn();
+        const galleryBigImage = $('.gallery-principal-img');
+        $(galleryBigImage).addClass('transition');
+
+$(galleryBigImage).on('transitionend webkitTransitionEnd oTransitionEnd', function() {
+  // Code to execute when the transition has ended
+  $(galleryBigImage).attr('src', replacedPath);
+  $(galleryBigImage).removeClass('transition');
+});
         
     })
   })
