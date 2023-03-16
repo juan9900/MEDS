@@ -271,7 +271,7 @@ h1 {
 }
 .wrapper {
   z-index: 0;
-  height: 100%;
+  height: 23rem;
   position: relative;
 }
 .custom-slider-container {

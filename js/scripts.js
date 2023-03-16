@@ -49,17 +49,17 @@ $( document ).ready(function() {
 sliderIndicators.eq(1).addClass('active');
     
     
-    $('.slider-element').each(function(){
-        const itemHeight = this.offsetHeight;
-        if(itemHeight > maxHeight){
-            maxHeight = itemHeight + $('.custom-slider-container').height();
+    // $('.slider-element').each(function(){
+    //     const itemHeight = this.offsetHeight;
+    //     if(itemHeight > maxHeight){
+    //         maxHeight = itemHeight + $('.custom-slider-container').height();
             
-        }
-        console.log(maxHeight);
+    //     }
+    //     console.log(maxHeight);
        
-        $('.wrapper').css('height',maxHeight);
+    //     $('.wrapper').css('height',maxHeight);
         
-    })
+    // })
 
     $('.custom-slider-container').height();
 
