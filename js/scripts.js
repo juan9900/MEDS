@@ -103,17 +103,11 @@ sliderIndicators.eq(1).addClass('active');
         $(miniatures).removeClass('active');
         $(this).addClass('active');
         const originalPath = $(this).attr('src');
-        console.log("🚀 ~ file: scripts.js:80 ~ $ ~ originalPath:", originalPath)
+        
         const replacedPath = originalPath.replace(/sm/g,'md');
-        console.log("🚀 ~ file: scripts.js:82 ~ $ ~ replacedPath:", replacedPath)
+        
         const galleryBigImage = $('.gallery-principal-img');
-        $(galleryBigImage).addClass('transition');
-
-$(galleryBigImage).on('transitionend webkitTransitionEnd oTransitionEnd', function() {
-  // Code to execute when the transition has ended
-  $(galleryBigImage).attr('src', replacedPath);
-  $(galleryBigImage).removeClass('transition');
-});
+        $(galleryBigImage).attr('src',replacedPath);
         
     })
   })
