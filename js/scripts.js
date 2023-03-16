@@ -84,7 +84,7 @@ sliderIndicators.eq(1).addClass('active');
         $('.gallery-principal-img').fadeOut(function(){
             $('.gallery-principal-img').attr('src',replacedPath);
         });
-        $('.gallery-principal-img').fadeIn();
+        $('.gallery-principal-img').delay(300).fadeIn();
         
     })
   })
