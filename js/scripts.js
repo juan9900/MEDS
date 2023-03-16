@@ -78,7 +78,7 @@ sliderIndicators.eq(1).addClass('active');
         $(this).addClass('active');
         const originalPath = $(this).attr('src');
         console.log("🚀 ~ file: scripts.js:80 ~ $ ~ originalPath:", originalPath)
-        const replacedPath = originalPath.replace(/sm/g,'lg');
+        const replacedPath = originalPath.replace(/sm/g,'md');
         console.log("🚀 ~ file: scripts.js:82 ~ $ ~ replacedPath:", replacedPath)
         $('.gallery-principal-img').fadeOut(function(){
             $('.gallery-principal-img').attr('src',replacedPath);

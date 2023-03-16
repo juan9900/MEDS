@@ -393,7 +393,7 @@ button:focus {
 }
 
 .miniature-container img {
-  margin: 1.5rem 0.5rem 0 0.5rem;
+  margin: 1rem 0.5rem 0 0.5rem;
   width: 11%;
   filter: grayscale(1);
   cursor: pointer;
