@@ -106,11 +106,11 @@ sliderIndicators.eq(1).addClass('active');
         console.log("🚀 ~ file: scripts.js:80 ~ $ ~ originalPath:", originalPath)
         const replacedPath = originalPath.replace(/sm/g,'md');
         console.log("🚀 ~ file: scripts.js:82 ~ $ ~ replacedPath:", replacedPath)
-        // $('.gallery-principal-img').fadeOut(function(){
-        //     $('.gallery-principal-img').attr('src',replacedPath);
-        // });
-        // $('.gallery-principal-img').delay(300).fadeIn();
-        $('.gallery-principal-img')
+        $('.gallery-principal-img').fadeOut(function(){
+            $('.gallery-principal-img').attr('src',replacedPath);
+        });
+        $('.gallery-principal-img').delay(300).fadeIn();
+        
     })
   })
 
