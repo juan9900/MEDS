@@ -69,7 +69,8 @@ sliderIndicators.eq(1).addClass('active');
     $('#prev').on('click',slidePrev);
     
 
-
+    var queue = new createjs.LoadQueue(true);
+    queue.loadManifest(["/assets/img/galeria-meds-md/galeria-meds-md-1.jpg","/assets/img/galeria-meds-md/galeria-meds-md-2.jpg","/assets/img/galeria-meds-md/galeria-meds-md-3.jpg","/assets/img/galeria-meds-md/galeria-meds-md-4.jpg","/assets/img/galeria-meds-md/galeria-meds-md-5.jpg","/assets/img/galeria-meds-md/galeria-meds-md-6.jpg","/assets/img/galeria-meds-md/galeria-meds-md-7.jpg","/assets/img/galeria-meds-md/galeria-meds-md-8.jpg","/assets/img/galeria-meds-md/galeria-meds-md-9.jpg","/assets/img/galeria-meds-md/galeria-meds-md-10.jpg","/assets/img/galeria-meds-md/galeria-meds-md-11.jpg","/assets/img/galeria-meds-md/galeria-meds-md-12.jpg","/assets/img/galeria-meds-md/galeria-meds-md-13.jpg","/assets/img/galeria-meds-md/galeria-meds-md-14.jpg","/assets/img/galeria-meds-md/galeria-meds-md-15.jpg"]);
   //Select the image to visualize in the gallery
   const miniatures = $('.gallery-miniature');
   $(miniatures).each(function(){
@@ -87,4 +88,6 @@ sliderIndicators.eq(1).addClass('active');
         
     })
   })
+
+
 });
