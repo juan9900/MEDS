@@ -70,13 +70,21 @@ sliderIndicators.eq(1).addClass('active');
     
 
 
-    $('.slider-indicator').each(function(i){
+  //Select the image to visualize in the gallery
+  const miniatures = $('.gallery-miniature');
+  $(miniatures).each(function(){
+    $(this).on('click',function(){
+        $(miniatures).removeClass('active');
+        $(this).addClass('active');
+        const originalPath = $(this).attr('src');
+        console.log("🚀 ~ file: scripts.js:80 ~ $ ~ originalPath:", originalPath)
+        const replacedPath = originalPath.replace(/sm/g,'lg');
+        console.log("🚀 ~ file: scripts.js:82 ~ $ ~ replacedPath:", replacedPath)
+        $('.gallery-principal-img').fadeOut(function(){
+            $('.gallery-principal-img').attr('src',replacedPath);
+        });
+        $('.gallery-principal-img').fadeIn();
         
-        // $(this).on('click',function(){
-        //     activeElementIndex = i;
-        //     slideNext();
-        //     $('.slider-indicator').css('background','var(--title)');
-        //     $(this).css('background','var(--secondary)')
-        // })
     })
+  })
 });

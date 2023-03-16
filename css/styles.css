@@ -393,7 +393,14 @@ button:focus {
 }
 
 .miniature-container img {
-  margin-top: 1rem;
-  width: 10%;
-  flex: 1;
+  margin: 1.5rem 0.5rem 0 0.5rem;
+  width: 11%;
+  filter: grayscale(1);
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+}
+
+.gallery-miniature.active {
+  filter: grayscale(0);
+  box-shadow: 0 0 10px;
 }
