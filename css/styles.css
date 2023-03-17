@@ -46,7 +46,7 @@ img {
 /* HEADER */
 
 header {
-  background: url("/assets/img/Banners/Banner-MEDS_01.jpg");
+  background: url("/assets/img/Banners/banner-meds-01.webp");
   background-size: cover;
   background-position: 0 5%;
   background-repeat: no-repeat;
@@ -83,7 +83,7 @@ h1 {
 
 /* SECTION RESONADOR */
 .section-resonador {
-  background: url("/assets/img/Banners/Banner-MEDS_02.jpg");
+  background: url("/assets/img/Banners/banner-meds-02.webp");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -103,7 +103,7 @@ h1 {
 }
 /* SECTION US */
 .section-us {
-  background: url("/assets/img/Banners/Banner-MEDS_03.jpg");
+  background: url("/assets/img/Banners/banner-meds-03.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -135,7 +135,7 @@ h1 {
 
 .section-booking {
   overflow: hidden;
-  background: url("/assets/img/Banners/Banner-MEDS_04.jpg");
+  background: url("/assets/img/Banners/banner-meds-04.webp");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -155,7 +155,7 @@ h1 {
 
 /* SERVICES PAGE */
 .body-services {
-  background: url("/assets/img/fondo-servicios.jpg");
+  background: url("/assets/img/fondo-servicios.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 100% 100%;
@@ -413,7 +413,7 @@ button:focus {
 }
 /* DOCTORS PAGE */
 .body-specialists {
-  background: url("/assets/img/fondo-especialistas.jpg");
+  background: url("/assets/img/fondo-especialistas.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
