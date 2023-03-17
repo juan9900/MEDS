@@ -165,7 +165,7 @@ h1 {
   background: none;
 }
 
-.body-services h1 {
+.page-title {
   padding: 5rem 0 0 0;
   border-width: 7px;
   border-style: solid;
@@ -412,12 +412,22 @@ button:focus {
   opacity: 0;
 }
 /* DOCTORS PAGE */
+.body-specialists {
+  background: url("/assets/img/fondo-especialistas.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.header-specialists {
+  background: none;
+}
 .doctors-container {
   padding: 0 6rem;
 }
 .doctor {
   width: 30%;
-  margin-bottom: 1rem;
+  margin: 0 1rem 5rem 1rem;
   height: fit-content;
   overflow: hidden;
 }
@@ -539,6 +549,7 @@ button:focus {
   font-family: "Cond";
   font-size: 1.3em;
   margin-top: 0.5rem;
+  line-height: 1.3rem;
 }
 
 .doctor-info-container a:link,
@@ -549,4 +560,5 @@ button:focus {
   align-self: flex-end;
   font-size: 1.5em;
   cursor: pointer;
+  text-transform: uppercase;
 }
