@@ -542,14 +542,13 @@ button:focus {
 }
 
 .doctor-info-container ul {
-  list-style-type: none;
+  /* list-style-type: none; */
 }
 
 .doctor-info-container li {
   font-family: "Cond";
-  font-size: 1.3em;
-  margin-top: 0.5rem;
-  line-height: 1.3rem;
+  font-size: 1.4em;
+  line-height: 1.8rem;
 }
 
 .doctor-info-container a:link,
@@ -561,4 +560,104 @@ button:focus {
   font-size: 1.5em;
   cursor: pointer;
   text-transform: uppercase;
+}
+
+/* CONTACT PAGE */
+.body-contact {
+  background: url("/assets/img/fondo-contacto.webp");
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  padding-bottom: 10rem;
+}
+
+.header-contact {
+  background: none;
+}
+.contact-form {
+  background: #ffffff76;
+  padding: 2rem;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.contact-form::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: -1;
+  filter: blur(7px);
+  background: transparent;
+
+  border: 10px solid white;
+  border-radius: 1rem;
+
+  box-shadow: 2px 2px 10px #b8b8b8;
+}
+.contact-form label {
+  font-family: "BoldItalic";
+  font-size: 1.5em;
+}
+
+.contact-form input {
+  font-family: "Cond";
+  border-radius: 0.3rem;
+  border: none;
+  margin-bottom: 0.5rem;
+  padding: 0.3rem 0.5rem;
+  font-size: 1.2em;
+  color: #494949;
+}
+
+.contact-form textarea {
+  border: none;
+  border-radius: 0.3rem;
+  resize: none;
+  padding: 0.3rem 0.5rem;
+  font-family: "Cond";
+  font-size: 1.2em;
+  color: #494949;
+}
+
+.contact-form .form-submit {
+  transition: 0.2s ease-in-out;
+}
+
+.contact-form .form-submit:hover {
+  background: #dfdfdf;
+}
+.map-container {
+  background: #ffffff76;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+.map {
+  font-family: "Cond";
+  font-size: 1.4em;
+  line-height: 1.5rem;
+}
+.map::before {
+  content: "";
+  position: absolute;
+  top: -30px;
+  left: -30px;
+  right: -30px;
+  bottom: -30px;
+  z-index: -1;
+  filter: blur(7px);
+  background: transparent;
+
+  border: 10px solid #fff;
+  border-radius: 1rem;
+}
+.map img {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -110%);
+  width: 15%;
 }

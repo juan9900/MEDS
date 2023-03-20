@@ -46,20 +46,10 @@ function slidePrev() {
 
 $( document ).ready(function() {
     let maxHeight = 0;
-sliderIndicators.eq(1).addClass('active');
+    sliderIndicators.eq(1).addClass('active');
     
     
-    // $('.slider-element').each(function(){
-    //     const itemHeight = this.offsetHeight;
-    //     if(itemHeight > maxHeight){
-    //         maxHeight = itemHeight + $('.custom-slider-container').height();
-            
-    //     }
-    //     console.log(maxHeight);
-       
-    //     $('.wrapper').css('height',maxHeight);
-        
-    // })
+
 
     $('.custom-slider-container').height();
 
@@ -96,23 +86,23 @@ sliderIndicators.eq(1).addClass('active');
         console.log("Images loaded.");
         // You can now use the images in your application
       }
-  //Select the image to visualize in the gallery
-  const miniatures = $('.gallery-miniature');
-  $(miniatures).each(function(){
-    $(this).on('click',function(){
-        $(miniatures).removeClass('active');
-        $(this).addClass('active');
-        const originalPath = $(this).attr('src');
-        
-        const replacedPath = originalPath.replace(/sm/g,'md');
-        
-        const galleryBigImage = $('.gallery-principal-img');
-        $(galleryBigImage).attr('src',replacedPath);
-        
-    })
-  })
+      //Select the image to visualize in the gallery
+      const miniatures = $('.gallery-miniature');
+      $(miniatures).each(function(){
+        $(this).on('click',function(){
+            $(miniatures).removeClass('active');
+            $(this).addClass('active');
+            const originalPath = $(this).attr('src');
+            
+            const replacedPath = originalPath.replace(/sm/g,'md');
+            
+            const galleryBigImage = $('.gallery-principal-img');
+            $(galleryBigImage).attr('src',replacedPath);
+            
+        })
+      })
 
-
+  
 
 
 });
