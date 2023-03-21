@@ -48,7 +48,7 @@ img {
 header {
   background: url("/assets/img/Banners/banner-meds-01.webp");
   background-size: cover;
-  background-position: 0 5%;
+  background-position: 0 6%;
   background-repeat: no-repeat;
 }
 
@@ -62,7 +62,7 @@ h1 {
   text-transform: uppercase;
 }
 .navbar-brand {
-  width: 15%;
+  width: 17%;
 }
 
 .nav-link {
@@ -122,7 +122,7 @@ h1 {
   text-align: justify;
 }
 
-.section-us p span {
+.section-us p span:not(.removable) {
   font-family: "Bold";
   font-size: 1.2em;
   text-shadow: 2px 2px 5px rgb(17, 17, 17);
@@ -542,13 +542,22 @@ button:focus {
 }
 
 .doctor-info-container ul {
-  /* list-style-type: none; */
+  list-style-type: none;
 }
 
 .doctor-info-container li {
   font-family: "Cond";
   font-size: 1.4em;
   line-height: 1.8rem;
+}
+
+.doctor-info-container ul > li {
+  text-indent: -15px;
+}
+.doctor-info-container ul > li:before {
+  content: "-";
+  text-indent: -15px;
+  padding-right: 0.5rem;
 }
 
 .doctor-info-container a:link,
@@ -624,6 +633,7 @@ button:focus {
 
 .contact-form .form-submit {
   transition: 0.2s ease-in-out;
+  background: #f5f5f5;
 }
 
 .contact-form .form-submit:hover {
@@ -660,4 +670,206 @@ button:focus {
   left: 50%;
   transform: translate(-50%, -110%);
   width: 15%;
+}
+
+@media screen and (max-width: 1280px) {
+  .section-us {
+    background-position: 35% 0;
+  }
+  .wrapper {
+    padding-bottom: 35rem;
+  }
+  .slider-control {
+    width: 10%;
+  }
+  .gallery-principal-img {
+    margin: auto;
+  }
+  .miniature-container img {
+    width: 15%;
+  }
+  .doctor {
+    margin: 3rem auto;
+    justify-content: flex-start;
+  }
+  .doctor-img-container img {
+    width: 100%;
+    position: relative;
+  }
+  .doctor-img-container {
+    display: flex;
+    justify-content: flex-start;
+    flex: 0.5;
+  }
+  .doctor-info-container {
+    flex: 1;
+  }
+}
+@media screen and (max-width: 1024px) {
+  /* INDEX SCREEN  */
+  header {
+    background-position: 67% 0%;
+  }
+
+  .navbar-brand {
+    width: 40%;
+  }
+  .index-heading {
+    font-size: 3em;
+    padding: 5rem 0;
+  }
+
+  .section-resonador {
+    background-position: left;
+    padding: 5rem 0;
+  }
+
+  .section-resonador h2 {
+    font-size: 2.5em;
+  }
+
+  .section-us {
+    text-align: center;
+  }
+
+  .section-us p {
+    text-align: justify;
+    font-size: 1em;
+  }
+  .section-booking {
+    padding: 4rem 0;
+  }
+
+  .section-booking .rugby-ball {
+    top: 110%;
+    transform: rotate(30deg) translateX(-50%) translateY(-5%);
+  }
+
+  .section-us p span.removable {
+    display: none;
+  }
+  /* SERVICES PAGE */
+  .page-title {
+    font-size: 4em;
+  }
+  .service {
+    width: 100%;
+  }
+
+  /* CENTER PAGE */
+  .slider-element {
+    width: 70%;
+    transform: translate(-50%, -50%);
+    bottom: auto;
+    top: 50%;
+  }
+  .slider-element.active {
+    transform: translate(-50%, -50%);
+    bottom: 50%;
+  }
+  .slider-element.next {
+    left: 0%;
+    transform: scale(0.8) translateY(-60%);
+  }
+
+  .slider-element.prev {
+    left: 30%;
+    transform: scale(0.8) translateY(-60%);
+  }
+  .slider-control {
+    z-index: 999999;
+    width: 18%;
+  }
+
+  .slider-control {
+    bottom: 0;
+    top: auto;
+    transform: none;
+  }
+  .gallery-container {
+    padding: 0;
+  }
+  .gallery-container h1 {
+    font-size: 2em;
+    text-align: center;
+  }
+  .miniature-container img {
+    width: 20%;
+  }
+  /* SPECIALISTS PAGE */
+  .header-specialists {
+    font-size: 0.9em;
+  }
+  .doctors-container {
+    padding: 0 1rem;
+  }
+  .doctor {
+    width: 90%;
+    height: 20rem;
+  }
+
+  .doctor h3 {
+    font-size: 1.5em;
+    line-height: 1.6rem;
+    padding-top: 0;
+  }
+
+  .doctor li {
+    font-size: 1.2em;
+    line-height: 1.5rem;
+  }
+  .doctor a:link,
+  .doctor a:visited {
+    font-size: 1.2em;
+  }
+
+  .doctor-img-container img {
+    height: 100%;
+  }
+
+  .doctor-img {
+    object-fit: cover;
+    object-position: 0% 0%;
+  }
+
+  .doctor button {
+    display: none;
+  }
+  .doctor-info-container {
+    left: 0;
+  }
+  /* CONTACT PAGE */
+  .header-contact {
+    font-size: 0.9em;
+  }
+  .right-container {
+    padding: 0;
+    margin-top: 5em;
+  }
+  .map img {
+    width: 30%;
+  }
+
+  .map iframe {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .section-us {
+    background-position: 50% 0;
+  }
+  .wrapper {
+    padding-bottom: 20rem;
+  }
+  .doctor-info-container li {
+    font-size: 1.05em;
+  }
+}
+@media screen and (max-width: 480px) {
+  .doctor-img-container {
+    flex: 1;
+  }
+  .doctor-info-container {
+    flex: 1;
+  }
 }
