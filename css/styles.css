@@ -422,13 +422,25 @@ button:focus {
 .header-specialists {
   background: none;
 }
+.doctor {
+  /* background: red; */
+  margin: 0 auto;
+}
 .doctors-container {
   padding: 0 6rem;
+  display: grid;
+  row-gap: 3rem;
+  grid-auto-rows: 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+  justify-content: center;
+}
+.doctors-container > *:nth-child(7),
+.doctors-container > *:nth-child(8) {
+  margin: 0 50%;
 }
 .doctor {
-  width: 30%;
-  margin: 0 1rem 5rem 1rem;
-  height: fit-content;
+  width: 90%;
+  height: 100%;
   overflow: hidden;
 }
 
@@ -510,9 +522,11 @@ button:focus {
   }
 }
 .doctor-img {
-  position: absolute;
+  position: relative;
   bottom: 0;
   left: 0;
+  height: 100%;
+  object-fit: cover;
 }
 
 .doctor-info-container {
@@ -523,7 +537,7 @@ button:focus {
   transition: left 0.3s ease;
   border-top-right-radius: 1.5rem;
   border-bottom-right-radius: 1.5rem;
-  padding: 1rem;
+  padding: 1rem 1rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -569,6 +583,7 @@ button:focus {
   font-size: 1.5em;
   cursor: pointer;
   text-transform: uppercase;
+  padding-bottom: 1rem;
 }
 
 /* CONTACT PAGE */
@@ -672,15 +687,201 @@ button:focus {
   width: 15%;
 }
 
+*,
+*::after,
+*::before {
+  border: 1px solid green;
+}
+
+.doctor {
+  border: 1px solid red;
+}
+
+.doctors-container {
+  border: 1px solid yellow;
+}
+
+.doctor-info-container {
+  border: 1px solid orange;
+}
+
+@media screen and (min-width: 3801px) and (max-width: 4000px) {
+  h1 {
+    font-size: 11em;
+  }
+  .section-resonador h2 {
+    font-size: 5em;
+  }
+  .section-us {
+    background-position: 0 20%;
+  }
+  .section-us h3 {
+    font-size: 6em;
+  }
+
+  .section-us p {
+    font-size: 2.3em;
+  }
+  .section-booking .rugby-ball {
+    top: 110%;
+    transform: rotate(30deg) translateX(-50%) translateY(-25%);
+  }
+  /* SERVICES PAGE */
+  .services-container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .service li,
+  .service p {
+    font-size: 2.2em;
+  }
+  .service ul li {
+    line-height: 1.2em;
+  }
+  .service h3 {
+    font-size: 2.4em;
+  }
+  .service-title-container img {
+    width: 3%;
+  }
+  /* CENTER PAGE */
+  .wrapper {
+    padding-bottom: 35rem;
+  }
+  .slider-element {
+    width: 20%;
+  }
+  .slider-element.next {
+    left: 30%;
+  }
+  .center-description {
+    font-size: 3em;
+    line-height: 3rem;
+  }
+
+  .gallery-container {
+    font-size: 2.8em;
+  }
+  .gallery-principal-container {
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  .gallery-principal-img {
+    width: 100%;
+  }
+  .miniature-row {
+    justify-content: center;
+  }
+  nav li {
+    font-size: 2.5em;
+  }
+}
+
+@media screen and (min-width: 2400px) and (max-width: 3800px) {
+  h1 {
+    font-size: 9em;
+  }
+  .section-resonador h2 {
+    font-size: 4em;
+  }
+  .section-us {
+    background-position: 0 20%;
+  }
+  .section-us h3 {
+    font-size: 4em;
+  }
+
+  .section-us p {
+    font-size: 1.6em;
+  }
+  .section-booking .rugby-ball {
+    top: 110%;
+    transform: rotate(30deg) translateX(-50%) translateY(-30%);
+  }
+  /* SERVICES PAGE */
+  .services-container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .service li,
+  .service p {
+    font-size: 1.7em;
+  }
+  /* CENTER PAGE */
+  .wrapper {
+    padding-bottom: 35rem;
+  }
+  .center-description {
+    font-size: 2.5em;
+    line-height: 2.8rem;
+  }
+
+  .gallery-container {
+    font-size: 2.3em;
+  }
+  .gallery-principal-container {
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  .gallery-principal-img {
+    width: 100%;
+  }
+
+  .doctors-container > :nth-child(7),
+  .doctors-container > :nth-child(8) {
+    margin: auto;
+  }
+  .doctors-container {
+    grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+  }
+  .doctor {
+    margin: 0 auto;
+  }
+  nav li {
+    font-size: 2em;
+  }
+}
+@media screen and (min-width: 2800px) and (max-width: 3799px) {
+  .wrapper {
+    padding-bottom: 40rem;
+  }
+  .doctors-container > :nth-child(7),
+  .doctors-container > :nth-child(8) {
+    margin: auto;
+  }
+}
+@media screen and (max-width: 2500px) {
+  .doctors-container > :nth-child(7),
+  .doctors-container > :nth-child(8) {
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 2000px) {
+  h1 {
+    font-size: 7em;
+  }
+  .wrapper {
+    padding-bottom: 30rem;
+  }
+  .doctors-container > :nth-child(7),
+  .doctors-container > :nth-child(8) {
+    margin: 3rem 50%;
+  }
+}
+
 @media screen and (max-width: 1280px) {
+  h1 {
+    font-size: 5em;
+  }
+
   .section-us {
     background-position: 35% 0;
   }
   .wrapper {
-    padding-bottom: 35rem;
+    padding-bottom: 0rem;
   }
   .slider-control {
-    width: 10%;
+    width: 6%;
   }
   .gallery-principal-img {
     margin: auto;
@@ -703,6 +904,10 @@ button:focus {
   }
   .doctor-info-container {
     flex: 1;
+  }
+  .doctors-container > :nth-child(7),
+  .doctors-container > :nth-child(8) {
+    margin: 3rem auto;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -730,6 +935,7 @@ button:focus {
 
   .section-us {
     text-align: center;
+    background-position: 35% 0;
   }
 
   .section-us p {
@@ -777,8 +983,7 @@ button:focus {
     transform: scale(0.8) translateY(-60%);
   }
   .slider-control {
-    z-index: 999999;
-    width: 18%;
+    width: 10%;
   }
 
   .slider-control {
@@ -803,20 +1008,24 @@ button:focus {
   .doctors-container {
     padding: 0 1rem;
   }
+  .doctors-container > :nth-child(7),
+  .doctors-container > :nth-child(8) {
+    margin: 0 auto;
+  }
   .doctor {
-    width: 90%;
+    width: 80%;
     height: 20rem;
   }
 
   .doctor h3 {
-    font-size: 1.5em;
+    font-size: 2em;
     line-height: 1.6rem;
     padding-top: 0;
   }
 
   .doctor li {
-    font-size: 1.2em;
-    line-height: 1.5rem;
+    font-size: 1.5em;
+    line-height: 2rem;
   }
   .doctor a:link,
   .doctor a:visited {
@@ -844,25 +1053,100 @@ button:focus {
   }
   .right-container {
     padding: 0;
-    margin-top: 5em;
+    margin-top: 8em;
   }
   .map img {
-    width: 30%;
+    width: 15%;
   }
 
   .map iframe {
-    width: 100%;
+    max-width: 100%;
   }
 }
 @media screen and (max-width: 800px) {
   .section-us {
-    background-position: 50% 0;
+    background-position: 60% 0;
   }
+  /* SERVICES PAGE */
+  .service .service-title {
+    font-size: 1.7em;
+  }
+  .service h2 {
+    font-size: 1.5em;
+  }
+
+  .service h3 {
+    font-size: 1em;
+  }
+
+  .service li,
+  .service p {
+    font-size: 1em;
+  }
+  /* CENTER PAGE */
   .wrapper {
-    padding-bottom: 20rem;
+    padding-bottom: 36rem;
   }
   .doctor-info-container li {
     font-size: 1.05em;
+  }
+  .slider-control {
+    width: 13%;
+  }
+
+  /* SPECIALISTS PAGE */
+  .header-specialists {
+    font-size: 0.9em;
+  }
+  .doctors-container {
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  .doctor {
+    max-width: 100%;
+    padding: 1rem;
+    margin: 0 auto;
+  }
+  .doctors-container > :nth-child(7),
+  .doctors-container > :nth-child(8) {
+    margin: 0;
+  }
+
+  .doctor h3 {
+    font-size: 2em;
+    line-height: 1.6rem;
+    padding-top: 0;
+    padding-bottom: 1rem;
+  }
+
+  .doctor li {
+    font-size: 1.6em;
+    line-height: 1.9rem;
+  }
+  .doctor a:link,
+  .doctor a:visited {
+    font-size: 1.5em;
+  }
+
+  .doctor-img-container img {
+    height: 100%;
+  }
+
+  .doctor-img {
+    object-fit: cover;
+    object-position: 0% 0%;
+  }
+
+  .doctor button {
+    display: none;
+  }
+  .doctor-info-container {
+    left: 0;
+    padding: 1rem;
   }
 }
 @media screen and (max-width: 480px) {
@@ -871,5 +1155,72 @@ button:focus {
   }
   .doctor-info-container {
     flex: 1;
+  }
+
+  .wrapper {
+    padding-bottom: 20rem;
+  }
+  .doctors-container {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    position: relative;
+  }
+  .doctors-container > *:nth-child(7),
+  .doctors-container > *:nth-child(8) {
+    margin: 0 auto;
+  }
+
+  .doctor {
+    margin: 0 auto;
+    width: 80%;
+    padding: 0;
+  }
+
+  .doctor h3 {
+    font-size: 1.6em;
+  }
+
+  .doctor li {
+    font-size: 1.2em;
+  }
+  .doctor-info-container ul {
+    padding-left: 1rem;
+  }
+  .doctor a:link,
+  .doctor a:visited {
+    font-size: 1.1em;
+  }
+
+  .doctors-container {
+    padding: 0;
+    display: grid;
+    row-gap: 3rem;
+    grid-auto-rows: 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 321px) {
+  .doctors-container {
+    justify-content: flex-start;
+  }
+  .doctor {
+    width: 70%;
+  }
+
+  .doctor h3 {
+    font-size: 1.2em;
+  }
+
+  .doctor li {
+    font-size: 0.9em;
+  }
+  .doctor-info-container ul {
+    padding-left: 1rem;
+  }
+  .doctor a:link,
+  .doctor a:visited {
+    font-size: 0.9em;
   }
 }
