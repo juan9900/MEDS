@@ -686,7 +686,7 @@ button:focus {
   transform: translate(-50%, -110%);
   width: 15%;
 }
-
+/* 
 *,
 *::after,
 *::before {
@@ -703,7 +703,7 @@ button:focus {
 
 .doctor-info-container {
   border: 1px solid orange;
-}
+} */
 
 @media screen and (min-width: 3801px) and (max-width: 4000px) {
   h1 {
@@ -772,8 +772,63 @@ button:focus {
   .miniature-row {
     justify-content: center;
   }
+
+  /* SPECIALISTS PAGE */
+
+  .doctors-container > :nth-child(7),
+  .doctors-container > :nth-child(8) {
+    margin: auto;
+  }
+  .doctors-container {
+    /* grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr)); */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .doctor-img {
+    width: 100%;
+  }
+  .doctor-info-container h3 {
+    font-size: 5em;
+    line-height: 1.1em;
+  }
+  .doctor-info-container li {
+    font-size: 3.5em;
+    line-height: 1.6em;
+  }
+  .doctor {
+    margin: 2rem auto;
+    width: 30%;
+  }
+
+  .doctor-info-container a:link,
+  .doctor-info-container a:visited {
+    font-size: 2.5em;
+    padding-right: 2rem;
+  }
+  .doctor-plus-btn {
+    width: 5rem;
+    height: 5rem;
+  }
+
   nav li {
     font-size: 2.5em;
+  }
+  /* CONTACT PAGE */
+  .map img {
+    width: 8%;
+  }
+
+  .contact-form input,
+  .contact-form label,
+  .contact-form textarea {
+    font-size: 2.2em;
+  }
+
+  .map p {
+    font-size: 1.8em;
+    line-height: 3rem;
   }
 }
 
@@ -826,19 +881,56 @@ button:focus {
   .gallery-principal-img {
     width: 100%;
   }
+  /* SPECIALISTS PAGE */
 
   .doctors-container > :nth-child(7),
   .doctors-container > :nth-child(8) {
     margin: auto;
   }
   .doctors-container {
-    grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+    /* grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr)); */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .doctor-img {
+    width: 100%;
+  }
+  .doctor-info-container h3 {
+    font-size: 3em;
+    line-height: 1.1em;
+  }
+  .doctor-info-container li {
+    font-size: 2.5em;
+    line-height: 1.6em;
   }
   .doctor {
-    margin: 0 auto;
+    margin: 2rem auto;
+    width: 30%;
+  }
+
+  .doctor-info-container a:link,
+  .doctor-info-container a:visited {
+    font-size: 2em;
   }
   nav li {
     font-size: 2em;
+  }
+  /* CONTACT PAGE */
+  .map img {
+    width: 10%;
+  }
+
+  .contact-form input,
+  .contact-form label,
+  .contact-form textarea {
+    font-size: 1.8em;
+  }
+
+  .map p {
+    font-size: 1.8em;
+    line-height: 3rem;
   }
 }
 @media screen and (min-width: 2800px) and (max-width: 3799px) {
@@ -853,19 +945,22 @@ button:focus {
 @media screen and (max-width: 2500px) {
   .doctors-container > :nth-child(7),
   .doctors-container > :nth-child(8) {
-    margin: 0 auto;
+    margin: 3rem 50%;
   }
 }
 @media screen and (max-width: 2000px) {
   h1 {
-    font-size: 7em;
+    font-size: 6em;
   }
   .wrapper {
     padding-bottom: 30rem;
   }
+}
+
+@media screen and (max-width: 1640px) {
   .doctors-container > :nth-child(7),
   .doctors-container > :nth-child(8) {
-    margin: 3rem 50%;
+    margin: 0 auto;
   }
 }
 
@@ -1102,8 +1197,8 @@ button:focus {
     padding: 0 1rem;
     display: flex;
     flex-direction: column;
-    width: 90%;
-    margin: 0 auto;
+    width: 100%;
+    margin: 0;
     overflow: hidden;
   }
   .doctor {
@@ -1113,7 +1208,7 @@ button:focus {
   }
   .doctors-container > :nth-child(7),
   .doctors-container > :nth-child(8) {
-    margin: 0;
+    margin: 0 auto;
   }
 
   .doctor h3 {
@@ -1151,10 +1246,10 @@ button:focus {
 }
 @media screen and (max-width: 480px) {
   .doctor-img-container {
-    flex: 1;
+    flex: 0.5;
   }
   .doctor-info-container {
-    flex: 1;
+    flex: 0.8;
   }
 
   .wrapper {
@@ -1168,12 +1263,12 @@ button:focus {
   }
   .doctors-container > *:nth-child(7),
   .doctors-container > *:nth-child(8) {
-    margin: 0 auto;
+    margin: 1rem auto;
   }
 
   .doctor {
     margin: 0 auto;
-    width: 80%;
+    width: 70%;
     padding: 0;
   }
 
@@ -1194,19 +1289,35 @@ button:focus {
 
   .doctors-container {
     padding: 0;
-    display: grid;
-    row-gap: 3rem;
-    grid-auto-rows: 1fr;
-    grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
-    justify-content: center;
+    display: flex;
+  }
+
+  .doctors-container {
+    display: flex;
+    justify-content: flex-start;
+    margin: 0;
+    width: 100%;
+  }
+  .doctor {
+    width: 90%;
+    margin: 0;
+    justify-content: flex-start;
+    overflow: visible;
+    margin: 1rem auto;
+  }
+
+  .doctor-img-container {
+    flex: 0.5;
+  }
+  .doctor-info-container {
+    flex: 0.5;
+    width: 100%;
+    position: static;
   }
 }
 @media screen and (max-width: 321px) {
-  .doctors-container {
-    justify-content: flex-start;
-  }
-  .doctor {
-    width: 70%;
+  .page-title {
+    font-size: 3.5em;
   }
 
   .doctor h3 {
