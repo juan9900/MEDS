@@ -1,6 +1,6 @@
 $(document).ready(function(){
     $('.doctor-plus-btn').on('click',toggleMenu)
- 
+    
 })
 
 function toggleMenu(){
@@ -14,3 +14,4 @@ function toggleMenu(){
          $(this).addClass('turnCounter active').removeClass('turn');
      }
 }
+

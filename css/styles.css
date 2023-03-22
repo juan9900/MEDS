@@ -36,6 +36,11 @@ img {
   height: auto;
 }
 
+body,
+html {
+  overflow-x: hidden;
+}
+
 .row {
   /* Bootstrap 5 adds a margin right and left of -15px, this fix that space 
   which overflows from container */
@@ -961,6 +966,10 @@ button:focus {
   .doctors-container > :nth-child(7),
   .doctors-container > :nth-child(8) {
     margin: 0 auto;
+  }
+
+  .gallery-container h1 {
+    font-size: 2.5em;
   }
 }
 
