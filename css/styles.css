@@ -8,7 +8,7 @@
 
 @font-face {
   font-family: "BoldItalic";
-  src: url(/assets/fonts/AkzidenzGrotesk-BoldCondItalic_0.otf);
+  src: url("/assets/fonts/AkzidenzGrotesk-BoldCondItalic_0.otf");
 }
 
 @font-face {
@@ -123,8 +123,9 @@ h1 {
   font-size: 2.4em;
 }
 .section-us p {
-  font-size: 1.15em;
+  font-size: 1.4em;
   text-align: justify;
+  font-family: "Cond";
 }
 
 .section-us p span:not(.removable) {
@@ -147,11 +148,11 @@ h1 {
   padding: 8rem 0;
 }
 .section-booking .rugby-ball {
-  transform: rotate(45deg) translateX(-50%) translateY(-5%);
+  transform: rotate(40deg) translateX(-30%);
   position: absolute;
   top: 0;
   left: 0;
-  width: 70%;
+  width: 60%;
 }
 
 .section-booking a img {
@@ -206,6 +207,7 @@ h1 {
   font-family: "BoldItalic";
   font-size: 2.5em;
   text-transform: uppercase;
+  line-height: 3rem;
 }
 
 .service .service-title {
@@ -1255,6 +1257,26 @@ button:focus {
   }
 }
 @media screen and (max-width: 480px) {
+  .service .service-title {
+    font-size: 2.3em;
+    line-height: 2.5rem;
+  }
+  .service h2 {
+    font-size: 1.7em;
+  }
+  .service h3 {
+    font-size: 1.4em;
+  }
+
+  .service li,
+  .service p {
+    font-size: 1.3em;
+  }
+
+  .service p {
+    padding-left: 1rem;
+  }
+
   .doctor-img-container {
     flex: 0.5;
   }

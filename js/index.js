@@ -1,3 +1,14 @@
+const headerServices = $('header');
+
+var waypoint = new Waypoint({
+    element: headerServices,
+    handler: function(){
+        $('.index-heading').addClass('animate__animated animate__backInRight');
+    }
+})
+
+
+
 const sectionResonador = $('.section-resonador');
 
 var waypoint = new Waypoint({
