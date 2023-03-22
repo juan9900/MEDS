@@ -600,7 +600,10 @@ button:focus {
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
-  padding-bottom: 10rem;
+}
+
+.body-contact .row {
+  padding-bottom: 5rem;
 }
 
 .header-contact {
@@ -712,7 +715,10 @@ button:focus {
 .doctor-info-container {
   border: 1px solid orange;
 } */
-
+.footer-mdn {
+  background: var(--offWhite);
+  color: var(--grayText);
+}
 @media screen and (min-width: 3801px) and (max-width: 4000px) {
   h1 {
     font-size: 11em;
