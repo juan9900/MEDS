@@ -328,7 +328,7 @@ h1 {
 /* CENTER PAGE */
 /* HEADER */
 .header-center {
-  background: url("/assets/img/fondo-centro-1.jpg");
+  background: url("/assets/img/fondo-centro-1.webp");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -423,7 +423,7 @@ button:focus {
 }
 
 .gallery-container {
-  background: url("/assets/img/fondo-centro-2.jpg");
+  background: url("/assets/img/fondo-centro-2.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
