@@ -343,18 +343,19 @@ h1 {
   transition: left 0.7s, z-index 0.3s, transform 0.7s, filter 0.5s;
   box-shadow: 1px 2px 5px rgb(63, 63, 63);
   width: 30%;
+  top: 50%;
 }
 
 .slider-element.active {
   left: 50%;
   z-index: 4;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
 }
 
 .slider-element.next {
   left: 21%;
   z-index: 3;
-  transform: scale(0.8);
+  transform: scale(0.8) translateY(-62%);
   filter: grayscale(1);
 }
 
@@ -362,7 +363,7 @@ h1 {
   left: 50%;
 
   z-index: 3;
-  transform: scale(0.8);
+  transform: scale(0.8) translateY(-62%);
   filter: grayscale(1);
 }
 
@@ -857,6 +858,7 @@ button:focus {
   }
   .miniature-row {
     justify-content: center;
+    margin: 10rem 0;
   }
 
   /* SPECIALISTS PAGE */
@@ -973,6 +975,10 @@ button:focus {
   .gallery-principal-img {
     width: 100%;
   }
+
+  .miniature-row {
+    margin: 6rem 0;
+  }
   /* SPECIALISTS PAGE */
 
   .doctors-container > :nth-child(7),
@@ -1032,6 +1038,10 @@ button:focus {
   .doctors-container > :nth-child(7),
   .doctors-container > :nth-child(8) {
     margin: auto;
+  }
+
+  .miniature-row {
+    margin: 4rem 0;
   }
 }
 @media screen and (max-width: 2500px) {
