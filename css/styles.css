@@ -41,6 +41,14 @@ html {
   overflow-x: hidden;
 }
 
+nav {
+  z-index: 99;
+}
+
+nav li {
+  display: flex;
+  align-items: center;
+}
 .row {
   /* Bootstrap 5 adds a margin right and left of -15px, this fix that space 
   which overflows from container */
@@ -50,20 +58,48 @@ html {
 /* INDEX PAGE */
 /* HEADER */
 
-header {
+.header-index {
   background: url("/assets/img/Banners/banner-meds-01.webp");
   background-size: cover;
   background-position: 0 6%;
   background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.video-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 0.4s ease;
+}
+
+.video-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 1;
+  z-index: 1;
+}
+
+.video-container.active {
+  opacity: 1;
+  z-index: 1;
 }
 
 h1 {
-  padding: 10rem 0 12rem 0;
   font-family: "BoldItalic";
-  line-height: 0.9em;
   color: var(--offWhite);
   text-shadow: 2px 2px rgb(87, 87, 87);
-  font-size: 6em;
+  line-height: 0.9em;
+  padding: 10rem 0 12rem 0;
+  font-size: 7em;
+}
+.index-heading {
   text-transform: uppercase;
 }
 .navbar-brand {
@@ -74,6 +110,26 @@ h1 {
   font-family: "BoldItalic";
 }
 
+.video-button-container {
+  position: absolute;
+  width: 100%;
+  bottom: 20px;
+}
+#btn-video {
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  background: #ffffffdb;
+  font-family: "Cond";
+  color: var(--grayText);
+  font-size: 1.3em;
+  transition: background 0.2s ease-in-out;
+  z-index: 3;
+}
+
+#btn-video:hover {
+  background: #d6d6d6db;
+}
 .navbar-light .navbar-nav .nav-link {
   font-size: 1.8em;
   margin: 0 1rem;
@@ -419,6 +475,11 @@ button:focus {
 .gallery-principal-img.transition {
   opacity: 0;
 }
+
+.gallery-video {
+  width: 100%;
+  height: auto;
+}
 /* DOCTORS PAGE */
 .body-specialists {
   background: url("/assets/img/fondo-especialistas.webp");
@@ -429,6 +490,10 @@ button:focus {
 
 .header-specialists {
   background: none;
+}
+
+.header-specialists h1 {
+  line-height: 1.2em;
 }
 .doctor {
   /* background: red; */
@@ -720,6 +785,13 @@ button:focus {
   color: var(--grayText);
 }
 @media screen and (min-width: 3801px) and (max-width: 4000px) {
+  .header-index {
+    height: 60vh;
+  }
+
+  #btn-video {
+    font-size: 2em;
+  }
   h1 {
     font-size: 11em;
   }
@@ -847,6 +919,12 @@ button:focus {
 }
 
 @media screen and (min-width: 2400px) and (max-width: 3800px) {
+  .header-index {
+    height: 60vh;
+  }
+  #btn-video {
+    font-size: 1.8em;
+  }
   h1 {
     font-size: 9em;
   }
@@ -963,6 +1041,12 @@ button:focus {
   }
 }
 @media screen and (max-width: 2000px) {
+  .header-index {
+    height: 70vh;
+  }
+  #btn-video {
+    font-size: 1.2em;
+  }
   h1 {
     font-size: 6em;
   }
@@ -971,7 +1055,10 @@ button:focus {
   }
 }
 
-@media screen and (max-width: 1640px) {
+@media screen and (max-width: 1700px) {
+  .header-index {
+    height: 100vh;
+  }
   .doctors-container > :nth-child(7),
   .doctors-container > :nth-child(8) {
     margin: 0 auto;
@@ -1177,6 +1264,14 @@ button:focus {
   }
 }
 @media screen and (max-width: 800px) {
+  .header-index {
+    height: auto;
+    background-position: 90% 0;
+  }
+
+  #btn-video {
+    display: none;
+  }
   .section-us {
     background-position: 60% 0;
   }
@@ -1205,6 +1300,10 @@ button:focus {
   }
   .slider-control {
     width: 13%;
+  }
+
+  .gallery-video {
+    margin: 1rem 0;
   }
 
   /* SPECIALISTS PAGE */
@@ -1260,6 +1359,10 @@ button:focus {
   .doctor-info-container {
     left: 0;
     padding: 1rem;
+  }
+
+  .gallery-video {
+    margin: 0.5rem 0;
   }
 }
 @media screen and (max-width: 480px) {
@@ -1355,6 +1458,9 @@ button:focus {
 
   .map img {
     width: 30%;
+  }
+  .footer-mdn {
+    font-size: 0.7em;
   }
 }
 @media screen and (max-width: 321px) {

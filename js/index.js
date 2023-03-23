@@ -4,6 +4,7 @@ var waypoint = new Waypoint({
     element: headerServices,
     handler: function(){
         $('.index-heading').addClass('animate__animated animate__backInRight');
+        $('#btn-video').addClass('animate__animated animate__fadeInUp')
     }
 })
 
@@ -41,3 +42,27 @@ var waypoint = new Waypoint({
     },
     offset: 800,
   })
+
+  let videoReproducing = false;
+
+$(document).ready(function(){
+
+    console.log(screen.width)
+
+    const videoIndex = $('.index-video').get(0);
+    $('#btn-video').on('click',function(){
+        console.log(videoReproducing)
+        
+        if(!videoReproducing){
+            videoIndex.currentTime = 0.00;
+            videoIndex.play()
+            $(this).text('Detener video');
+        }else{
+            videoIndex.pause();
+            $(this).text('Reproducir video');
+        }
+        videoReproducing = !videoReproducing;
+        $('.video-container').toggleClass('active');
+        
+    })
+})
