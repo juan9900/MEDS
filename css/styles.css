@@ -1320,6 +1320,10 @@ button:focus {
   .header-specialists {
     font-size: 0.9em;
   }
+
+  .header-specialists h1 {
+    line-height: 0.9em;
+  }
   .doctors-container {
     padding: 0 1rem;
     display: flex;
@@ -1373,6 +1377,10 @@ button:focus {
 
   .gallery-video {
     margin: 0.5rem 0;
+  }
+
+  .body-contact .row {
+    padding-bottom: 0rem;
   }
 }
 @media screen and (max-width: 480px) {
