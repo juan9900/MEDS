@@ -452,6 +452,7 @@ button:focus {
   );
   font-family: "Bold";
   margin-bottom: 2rem;
+  text-transform: uppercase;
 }
 
 .miniature-container img {
