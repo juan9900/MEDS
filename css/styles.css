@@ -1066,7 +1066,7 @@ button:focus {
   }
 }
 
-@media screen and (max-width: 1700px) {
+@media screen and (max-width: 1500px) {
   .header-index {
     height: 100vh;
   }
