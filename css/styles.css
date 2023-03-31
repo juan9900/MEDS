@@ -340,31 +340,45 @@ h1 {
 }
 .slider-element {
   position: absolute;
-  transition: left 0.7s, z-index 0.3s, transform 0.7s, filter 0.5s;
+  transition: left 0.7s, z-index 0.3s, transform 0.7s, filter 0.5s, opacity 0.4s;
+  /* transition: all 1s; */
   box-shadow: 1px 2px 5px rgb(63, 63, 63);
   width: 30%;
   top: 50%;
-}
-
-.slider-element.active {
+  border: 5px solid white;
   left: 50%;
-  z-index: 4;
+  top: 50%;
   transform: translate(-50%, -50%);
 }
 
-.slider-element.next {
-  left: 21%;
-  z-index: 3;
-  transform: scale(0.8) translateY(-62%);
-  filter: grayscale(1);
+.hidden-img {
+  opacity: 0;
+  /* left: 50%; */
+  z-index: -1;
+  /* transform: translate(-50%, -50%) scale(0.1); */
+}
+.slider-element.active {
+  /* left: 50%; */
+  z-index: 4;
+  /* transform: translate(-50%, -50%); */
 }
 
-.slider-element.prev {
-  left: 50%;
-
-  z-index: 3;
-  transform: scale(0.8) translateY(-62%);
+.slider-element.next {
+  /* left: 21%; */
+  z-index: -1;
+  /* transform: scale(0.8) translateY(-62%); */
   filter: grayscale(1);
+  transform: translate(-20%, -50%) scale(0.8);
+}
+/*  */
+
+.slider-element.prev {
+  /* left: 50%; */
+
+  z-index: -1;
+  /* transform: scale(0.8) translateY(-62%); */
+  filter: grayscale(1);
+  transform: translate(-80%, -50%) scale(0.8);
 }
 
 .slider-control {
@@ -372,11 +386,6 @@ h1 {
   border: none;
   width: 5%;
   outline: none;
-}
-
-button:focus {
-  border: 0;
-  outline: none !important;
 }
 .slider-prev {
   position: absolute;
@@ -392,6 +401,11 @@ button:focus {
   transform: translateY(-50%);
   position: absolute;
 }
+button:focus {
+  border: 0;
+  outline: none !important;
+}
+
 .slider-indicators {
   position: relative;
   bottom: 0;
@@ -412,6 +426,23 @@ button:focus {
   background: var(--grayText);
 }
 
+/* .splide__slide img {
+  width: 100%;
+  height: auto;
+} */
+#image-carousel {
+  width: 35%;
+  margin: 0 auto;
+}
+
+#image-carousel .splide__pagination {
+  position: static;
+}
+.splide__slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 .center-description {
   font-family: "Cond";
   font-size: 1.6em;
@@ -608,7 +639,7 @@ button:focus {
   flex: 1;
   background: #ffffffc1;
   position: relative;
-  left: -100%;
+
   transition: left 0.3s ease;
   border-top-right-radius: 1.5rem;
   border-bottom-right-radius: 1.5rem;
@@ -617,9 +648,6 @@ button:focus {
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-}
-.doctor-info-container.active {
-  left: 0%;
 }
 
 .doctor-info-container h3 {
@@ -1051,20 +1079,6 @@ button:focus {
     margin: 3rem 50%;
   }
 }
-@media screen and (max-width: 2000px) {
-  .header-index {
-    height: 70vh;
-  }
-  #btn-video {
-    font-size: 1.2em;
-  }
-  h1 {
-    font-size: 6em;
-  }
-  .wrapper {
-    padding-bottom: 30rem;
-  }
-}
 
 @media screen and (max-width: 1500px) {
   .header-index {
@@ -1180,18 +1194,19 @@ button:focus {
     bottom: auto;
     top: 50%;
   }
+  .slider-element.hidden-img {
+    transform: translate(-50%, -50%) scale(0.3);
+  }
   .slider-element.active {
     transform: translate(-50%, -50%);
     bottom: 50%;
   }
   .slider-element.next {
-    left: 0%;
-    transform: scale(0.8) translateY(-60%);
+    transform: scale(0.8) translate(-90%, -60%);
   }
 
   .slider-element.prev {
-    left: 30%;
-    transform: scale(0.8) translateY(-60%);
+    transform: scale(0.8) translate(-35%, -60%);
   }
   .slider-control {
     width: 10%;
@@ -1310,7 +1325,7 @@ button:focus {
     font-size: 1.05em;
   }
   .slider-control {
-    width: 13%;
+    width: 15%;
   }
 
   .gallery-video {
