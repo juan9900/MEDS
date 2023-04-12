@@ -814,6 +814,21 @@ button:focus {
   background: var(--offWhite);
   color: var(--grayText);
 }
+
+a.footer-link,
+a.footer-link:visited,
+a.footer-link:link {
+  text-decoration: underline !important;
+  color: var(--grayText) !important;
+}
+
+.floating-link {
+  position: fixed;
+  bottom: 2%;
+  right: 2%;
+  width: 20%;
+}
+
 @media screen and (min-width: 3801px) and (max-width: 4000px) {
   .header-index {
     height: 60vh;
@@ -1290,6 +1305,9 @@ button:focus {
   }
 }
 @media screen and (max-width: 800px) {
+  .floating-link {
+    width: 60%;
+  }
   .header-index {
     height: auto;
     background-position: 90% 0;
@@ -1400,6 +1418,10 @@ button:focus {
   }
 }
 @media screen and (max-width: 480px) {
+  .floating-link {
+    width: 17%;
+    bottom: 5%;
+  }
   .service .service-title {
     font-size: 2.3em;
     line-height: 2.5rem;
@@ -1517,3 +1539,5 @@ button:focus {
     font-size: 0.9em;
   }
 }
+
+/* HOlaaa */
